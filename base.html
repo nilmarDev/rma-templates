@@ -1,0 +1,198 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    p {
+      margin: 0;
+    }
+    @media print{@page {size: landscape; margin: 0}}
+    .container {padding: 12px 24px 0;}
+    .font-primary {font-family: "Adobe Garamond Pro",serif;}
+    .font-secondary {font-family: Helvetica, serif;}
+    .title {text-align: center;font-size: 18pt;font-weight: bold;padding-bottom: 24px;}
+    .wrapper {width: 100%;margin: 0 auto;}
+    header {margin-top: 20px;align-items: center;}
+    .return-method h2 {text-transform: uppercase;margin: 0;font-size: 24px;}
+    .header-return {margin-bottom: 110px;}
+    .info-return {width: 30%;font-size: 10pt;}
+    .info-return p {margin: 0;padding-top: 5px;}
+    .logo {margin-bottom: 10px;}
+    .logo img {width: auto;height: 45px;}
+    .bold {font-weight: bold;}
+    table.table {width: 100%;border-collapse: collapse;}
+    table td {font-size: 9pt;font-weight: 500;}
+    thead {font-family: Helvetica, sans-serif;text-transform: uppercase;font-size: 10pt;font-weight: bold;border-bottom: 0.5pt solid #000000;}
+    /*.table, th, td {*/
+    /*  border: 0.5pt solid #000000;*/
+    /*}*/
+    .barcode {max-height: 45px;max-width: 150px;}
+    .table th, .table td {text-align: left;padding: 10px 5px;}
+    .refund-session {width: 250px;margin-top: 16px;margin-right: 10px;font-size: 9pt;float: right;}
+    .refund-session p {margin: 0;padding-bottom: 7px;}
+    .value-refund {text-align: right;float: right;}
+    .special-note {font-size: 9pt;margin-top: 16px;}
+    .return-method {text-transform: uppercase;font-size: 12pt;font-weight: bold;margin-top: 12px;}
+    .clean{clear:both;}
+    .solid-line {margin-bottom: 5px;border-bottom: 0.5pt #000000 solid;}
+    .dot-line {border-bottom: 1pt #000000 dotted;}
+    .left {float: left;}
+    .internal-use {width: 40%;margin-top: 8px;margin-right: 24px;padding-bottom: 16px;border-right: 0.5pt #000000 solid;}
+    .internal-use p {padding-bottom: 7px;}
+    .internal-inputs {margin-top: 16px;}
+    .mb-12 {margin-bottom: 12px;}
+    .internal-inputs label {margin-bottom: 16px;}
+    .internal-inputs input {width: 60%;border: 0;border-bottom: 0.5pt #000000 solid;}
+    .footer {font-size: 10pt;font-weight: 500;}
+    .footer-title {margin-bottom: 5px;font-size: 12pt;font-style: italic;}
+    table.footer-table {width: 40%;margin-top: 8px;margin-left: 24px;border-collapse: collapse;}
+    .footer-table td {font-size: 10pt;font-weight: 500;}
+    .footer-table .thead {text-transform: capitalize;}
+    .footer-table th, .footer-table td {text-align: left;padding: 5px;}
+  </style>
+</head>
+<div class="container">
+  <div class="wrapper">
+    <header>
+      <div class="title bold font-primary">RETURN AUTHORIZATION</div>
+      <div class="logo">
+        <img src="./logo.png" alt="logo">
+      </div>
+     <div class="header-return font-secondary">
+       <div class="info-return left">
+         <img alt="barcode" class="barcode" src="data:image/png;charset=utf8;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAAeCAQAAADHw0kaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAACQSURBVGje7dExDoAgEAXRj/e/MzYSoizYTjGvwsgiZlp6hvasW5K81sP6/ju7zu/31bP1Oadz5x37z/Npvr5DfV79neqfTvfc7r0iHKMAGQXIKEBGATIKkFGAjAJkFCCjABkFyChARgEyCpBRgIwCZBQgowAZBcgoQEYBMgqQUYCMAmQUIKMAGQXIKEBGAboB7UQcOwAayncAAAAASUVORK5CYII="/><br>
+         <p>Order #: 000366752</p>
+         <p>Name: Cara Genduso</p>
+       </div>
+       <div class="info-return left">
+         <p>Return Number: #18</p>
+         <p>Order Date: 10-18-2020</p>
+         <p>Return Date: 10-22-2020</p>
+       </div>
+       <div class="info-return left">
+         <p>Tracking Code: xxxxxxx</p>
+         <p>Payment Method: CreditCard</p>
+       </div>
+     </div>
+    </header>
+    <div class="clean"></div>
+    <table class="table font-secondary">
+      <thead>
+      <tr>
+        <th></th>
+        <th>RMA</th>
+        <th>SKU</th>
+        <th>Description</th>
+        <th>Reason</th>
+        <th>QTY</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><img alt="barcode" class="barcode"
+                 src="data:image/png;charset=utf8;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAAeCAQAAAC1DCusAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAACVSURBVGje7dFLDoAgDADR1vvfWTcSUhEhcTnzVoSfxMk4o8l7nBERZdyM6/1sncuP9Sz7ZnfN9q++MZ57zq/ump3bfdffveM76vz7P9w4f4QwjA1ibBBjgxgbxNggxgYxNoixQYwNYmwQY4MYG8TYIMYGMTaIsUGMDWJsEGODGBvE2CDGBjE2iLFBjA1ibBBjgxgb5AIndSI7mrRSEQAAAABJRU5ErkJggg=="/>
+        </td>
+        <td>19XTOGJJ</td>
+        <td>10025267</td>
+        <td>Ear Cuff, Silver</td>
+        <td>DAMAGED</td>
+        <td>1</td>
+        <td>$32.30</td>
+      </tr>
+      <tr>
+        <td><img alt="barcode" class="barcode"
+                 src="data:image/png;charset=utf8;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAAeCAQAAAC1DCusAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAACWSURBVGje7dE7DsAgDMDQpPe/c7uAEEUBdvtNiF9RnfFGl22cERHTuFvXx9l5LjfrOe2r7qr2n76xnvvPn+6qzt2+67x3/571X9ZvuLuvzT8hDGODGBvE2CDGBjE2iLFBjA1ibBBjgxgbxNggxgYxNoixQYwNYmwQY4MYG8TYIMYGMTaIsUGMDWJsEGODGBvE2CDGBvkAH4UiO1vog3UAAAAASUVORK5CYII="/>
+        </td>
+        <td>19XTOGJK</td>
+        <td>40014856</td>
+        <td>Teardrop Hoop, Silver (SINGLE)</td>
+        <td>DAMAGED</td>
+        <td>1</td>
+        <td>$22.95</td>
+      </tr>
+      <tr>
+        <td><img alt="barcode" class="barcode"
+                 src="data:image/png;charset=utf8;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAAeCAQAAAC1DCusAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAACYSURBVGje7dFJEoAgDADBxP//WS8uxRLhPtMnCwhaTsYZj7yfMyKieX6M+99su5Y/+9mcq+6qzq/eMc7166u7qrnd79qZnc/M/+/8H/X79Zn37BHCMDaIsUGMDWJsEGODGBvE2CDGBjE2iLFBjA1ibBBjgxgbxNggxgYxNoixQYwNYmwQY4MYG8TYIMYGMTaIsUGMDWJskAsXfSI7ixzCZAAAAABJRU5ErkJggg=="/>
+        </td>
+        <td>19XTOGJL</td>
+        <td>40014856</td>
+        <td>Teardrop Hoop, Silver (SINGLE)</td>
+        <td>DAMAGED</td>
+        <td>1</td>
+        <td>$22.95</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="solid-line"></div>
+    <div class="refund-session font-secondary">
+      <div class="left">
+        <p>SubTotal:</p>
+        <p>Discount:</p>
+        <p>Return Fee:</p>
+      </div>
+      <div class="value-refund">
+        <p>$155.00</p>
+        <p>-$15.00</p>
+        <p>$5.00</p>
+      </div>
+      <div class="clean"></div>
+      <div class="au">
+        <div class="solid-line"></div>
+        <div class="left">
+          <p>Estimated Refund:</p>
+        </div>
+        <div class="value-refund">
+          <p>$73.20</p>
+        </div>
+      </div>
+      <div class="clean"></div>
+      <div class="return-method">
+        <p>Returned in Store</p>
+      </div>
+    </div>
+
+    <div class="special-note font-secondary">
+      <div>SPECIAL INSTRUCTIONS:</div>
+    </div>
+    <div class="clean"></div>
+   <div class="footer">
+     <div class="footer-title font-primary">
+       <span>FOR INTERNAL USE ONLY:</span>
+     </div>
+     <div class="dot-line"></div>
+     <div class="internal-use left font-secondary">
+       <p>Name: Cara Genduso</p>
+       <p>Order #: 000366752</p>
+       <div class="internal-inputs">
+        <div class="mb-12"><label for="a1">Date returned to store:</label><input id="a1"/></div>
+         <div class="mb-12"><label for="a2">Sales assoc:</label><input id="a2"/></div>
+       </div>
+     </div>
+     <table class="footer-table font-secondary">
+       <thead class="thead">
+       <tr>
+         <th>qty</th>
+         <th>Description</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td>1</td>
+         <td>Ear Cuff, Silver</td>
+       </tr>
+       <tr>
+         <td>1</td>
+         <td>Teardrop Hoop, Silver (SINGLE)</td>
+       </tr>
+       <tr>
+         <td>1</td>
+         <td>Teardrop Hoop, Silver (SINGLE)</td>
+       </tr>
+       </tbody>
+     </table>
+     <div class=""></div>
+   </div>
+    <div class="clean"></div>
+  </div>
+</div>
