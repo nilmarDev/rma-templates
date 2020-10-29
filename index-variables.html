@@ -1,0 +1,142 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            font-family: 'Helvetica';
+        }
+        .title {
+            font-size: 30px; text-align: center;
+        }
+        .wrapper {
+            width: 100%; margin:  0 auto;
+        }
+        header {
+            margin-top: 20px; align-items: center;
+        }
+        .logo {
+            margin-right: 110px; margin-bottom: 30px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .info-shipped {
+            margin-bottom: 15px;
+        }
+        .billed {
+            margin-top: 20px;
+        }
+        .address-billed {
+            width: 350px;
+        }
+        table.table {
+            width: 100%; border-collapse:collapse;
+        }
+        table.table {
+            width: 100%; border-collapse:collapse;
+        }
+        thead {
+            border-top:2px solid #000000; border-bottom:2px solid #000000;
+        }
+        .barcode {
+            max-height: 45px; max-width: 150px;
+        }
+        .table th, .table td
+        {
+            text-align: left; padding: 15px 10px;
+        }
+        .refund-session {
+            margin-left: 125mm; margin-top: 10px;
+        }
+        .customer-comment {
+            margin-top: 10px; border: 1px solid; padding: 15px 10px; text-align: justify;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="title bold">RETURN AUTHORIZATION</div>
+    <div class="wrapper">
+        <header>
+            {{#if data.logo }}
+                <div class="logo">
+                    <img src="{{ data.logo }}" alt="logo" width="150px">
+                </div>
+            {{/if}}
+            <div class="info-return">
+                {{#if data.order_reference_bar_code }}
+                    <img alt="barcode" class="barcode" src="data:image/png;charset=utf8;base64,{{ data.order_reference_bar_code }}"/><br>
+                    <span class="bold">Original Order Number:</span> <span>{{ data.order_reference }}</span><br><br>
+                {{/if}}
+                <span class="bold">Name:</span> <span>{{ data.customer_name }}</span><br>
+                <span class="bold">Return Number:</span> <span>#{{ data.return_id }}</span><br>
+                <span class="bold">Original Order Date:</span> <span>{{ data.original_order_date }}</span><br>
+                <span class="bold">Return Date:</span> <span>{{ data.created_at }}</span><br>
+                <span class="bold">Tracking Code:</span> <span>{{ data.tracking_code }}</span><br>
+            </div>
+        </header>
+        <section class="info-shipped">
+            <div class="billed">
+                <div><b>SHIPPED FROM:</b></div>
+                <div class="address-billed">
+                    {{ data.customer_street_address }} <br>
+                    {{ data.customer_city }},
+                    {{ data.customer_state }},
+                    {{ data.customer_country }},
+                    {{ data.customer_zip_code }}<br>
+                    {{ data.customer_phone }}<br>
+                </div>
+            </div>
+            <div class="billed">
+                <div><b>ORIGINAL ADDRESS:</b></div>
+                <div class="address-billed">
+                    {{ data.original_street_address }}<br>
+                    {{ data.original_city }},
+                    {{ data.original_state }},
+                    {{ data.original_country }},
+                    {{ data.original_postal_code }}<br>
+                </div>
+            </div>
+        </section>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>RMA Bar Code</th>
+                <th>RMA</th>
+                <th>SKU</th>
+                <th>QTY</th>
+                <th>Description</th>
+                <th>Return Reason</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each items }}
+                <tr>
+                    <td><img alt="barcode" class="barcode" src="data:image/png;charset=utf8;base64,{{ barcode }}"/></td>
+                    <td>{{ rma_code }}</td>
+                    <td>{{ item_identifier }}</td>
+                    <td>{{ quantity }}</td>
+                    <td>{{ description }}</td>
+
+                    <td>{{ return_reason }}</td>
+                    <td>${{ price_with_tax }}</td>
+                </tr>
+            {{/each }}
+            </tbody>
+        </table>
+        <div class="refund-session">
+            <span><b>Return Fee: </b> ${{ data.fee }}</span><br>
+            <span><b>Estimated Refund: </b> ${{ data.estimated_refund }}</span><br>
+            <span><b>Payment Method: </b> {{ data.payment_methods }}</span>
+        </div>
+
+        <div class="billed">
+            <div><b>SPECIAL INSTRUCTIONS:</b></div>
+            <div class="customer-comment">
+                {{ data.customer_comment }}
+            </div>
+        </div>
+    </div>
+</div>
